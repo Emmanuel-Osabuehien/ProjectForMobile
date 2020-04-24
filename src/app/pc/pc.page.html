@@ -1,0 +1,78 @@
+<!-- Heading -->
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Personal Computers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Contents -->
+<ion-content color="warning">
+
+<!-- Creating divs for multiple sections of the page -->
+ 
+  <div class="box1"> 
+
+    <h1>PC</h1>
+    
+    <h2>For all interested or involved in the Steam community, this is where you can see all the latest news, prices for consoles, games, accesories and information
+      about everything that goes on in the Steam community</h2>
+    
+    <h3></h3>
+    
+  </div>
+    
+    <div id="box2"> 
+      
+      <br>
+
+    <!-- Creating a radio button which allows me to store data(Values) to my home page -->
+    
+      <h3> What are you interested in? </h3>
+      <ion-list>
+        <ion-radio-group [(ngModel)]="myStatus3">
+        <ion-item>
+        <ion-label>Desktop</ion-label>
+        <ion-radio value="Desktop"></ion-radio>
+        </ion-item>
+        <ion-item>
+        <ion-label>Laptop</ion-label>
+        <ion-radio value="Laptop"></ion-radio>
+        </ion-item>
+        </ion-radio-group>
+        <ion-button (click)="saveStatus3()" color="warning">Save</ion-button>
+        </ion-list>
+
+      <br> 
+    
+    </div>
+
+    <div id="box3"> 
+
+<!-- Creating a list of inquiries which navigate you to different website depending on the topic-->
+<!-- When you click on each item it should send you the the website contained in the href -->
+
+      <h3> Click if any queries on these topics</h3>
+
+      <ion-list>
+        <ion-item href="https://www.currys.ie/ieen/gaming-pcs/computing/desktop-pcs/desktop-pcs/317_3055_30057_xx_ba00010707-bv00308579/xx-criteria.html">
+          <ion-label>Computers</ion-label>
+        </ion-item>
+        <ion-item href="https://www.gamestop.ie/SearchResult/QuickSearchHeaderPlatform?platform=6&rootGenre=2">
+          <ion-label>Games</ion-label>
+        </ion-item>
+        <ion-item href="https://www.gamestop.ie/SearchResult/QuickSearchHeaderPlatform?platform=6&rootGenre=26"> 
+          <ion-label>Accesories</ion-label>
+        </ion-item>
+        <ion-item href="https://www.g2a.com/en-gb/steam-gift-card-100-usd-steam-key-global-i10000000258074?aid=11779719&___currency=EUR&er=731a39a8ccb868f05a09c2ae8a1e1158&___language=en&adid=GMC_IR-Smart-HIGH&id=14&gclid=CjwKCAiAyMHhBRBIEiwAkGN6fLgNqD0eiuUr7tOgGkImyYVFIxBqUZ57h4wtPT99ZtDI4ob-31VFExoCwDoQAvD_BwE&gclsrc=aw.ds">
+          <ion-label>Steam</ion-label>
+        </ion-item>
+        <ion-item href="https://www.gamespot.com/pc/">
+          <ion-label>Latest News</ion-label>
+        </ion-item>
+      </ion-list>
+
+    </div>
+</ion-content>

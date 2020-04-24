@@ -1,0 +1,89 @@
+<!-- Headings -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Sony Playstation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- Contents -->
+<ion-content color="primary">
+
+<!-- Creating divs for multiple sections of the page -->
+  <div class="box1"> 
+
+    <h1>Playstation</h1>
+    
+    <h2>For all interested or involved in the PS Network community, this is where you can see all the latest news, prices for consoles, games, accesories and information
+     about everything that goes on in the PSN community</h2>
+    
+    <h3></h3>
+    
+  </div>
+    
+    <div id="box2"> 
+      
+      <br>
+
+<!-- Creating a radio button which allows me to store data(Values) to my home page -->
+    
+        <h3> Which console do you currently own? </h3>
+
+        <ion-list>
+          <ion-radio-group [(ngModel)]="myStatus">
+          <ion-item>
+          <ion-label>Playstation</ion-label>
+          <ion-radio value="PS1"></ion-radio>
+          </ion-item>
+          <ion-item>
+          <ion-label>Playstation 2</ion-label>
+          <ion-radio value="PS2"></ion-radio>
+          </ion-item>
+          <ion-item>
+          <ion-label>Playstation 3</ion-label>
+          <ion-radio value="PS3" ></ion-radio>
+          </ion-item>
+          <ion-item>
+          <ion-label>Playstation 4</ion-label>
+          <ion-radio value="PS4" ></ion-radio>
+          </ion-item>
+          <ion-item>
+          <ion-label>Playstation 5</ion-label>
+          <ion-radio value="PS5"></ion-radio>
+          </ion-item>
+          </ion-radio-group>
+          <ion-button (click)="saveStatus()">Click To Save</ion-button>
+          </ion-list>
+    <br> 
+    
+    </div>
+
+    <div id="box3"> 
+<!-- Creating a list of inquiries which navigate you to different website depending on the topic-->
+<!-- When you click on each item it should send you the the website contained in the href -->
+
+
+      <h3> Click if any queries on these topics</h3>
+
+      <ion-list>
+        <ion-item href="https://www.gamestop.ie/SearchResult/QuickSearchHeaderPlatform?platform=31&rootGenre=27">
+          <ion-label>Consoles</ion-label>
+        </ion-item>
+        <ion-item  href="https://www.gamestop.ie/SearchResult/QuickSearchHeaderPlatform?platform=31&rootGenre=2">
+          <ion-label>Games</ion-label>
+        </ion-item>
+        <ion-item href="https://www.gamestop.ie/SearchResult/QuickSearchHeaderPlatform?platform=31&rootGenre=26"> 
+          <ion-label>Accesories</ion-label>
+        </ion-item>
+        <ion-item href="https://www.gamestop.ie/PlayStationPlus">
+          <ion-label>Playstation Plus</ion-label>
+        </ion-item>
+        <ion-item href="https://www.gamespot.com/news/ps4/">
+          <ion-label>Latest News</ion-label>
+        </ion-item>
+      </ion-list>
+  
+    </div>
+</ion-content>

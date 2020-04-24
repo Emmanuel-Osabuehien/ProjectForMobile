@@ -1,20 +1,317 @@
+<!-- Heading -->
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="dark">
     <ion-title>
-      Blank
+      Games For You
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
+<!-- Contents -->
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Games For You</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<!-- Creating the layout of the app -->
+<!-- In the style tags we added what i wanted all the div tags to look like -->
+<!-- I created 4 div tags for my navigation bar -->
+<!-- Then I created a divs to store for Plug-Ins and Storage methods -->
+<!-- And finally created 3 divs that carry text that xcarry info in regards to the app overall theme -->
+
+      <style>
+      
+      
+      .box1 a {display: inline-block;
+            text-decoration: none;
+            padding: 20px;
+            margin: 100px;}
+
+      #home {
+            width: 25%;
+            height: 40px;
+            border: 2px solid #B22222;
+            padding: 10px;
+            border-radius: 5px;
+            margin: auto;
+            text-decoration: none;
+            background-color: black;
+            color: darkgrey;
+            text-align: center;
+            box-shadow: 5px 5px 12px black;
+            }
+            
+            
+      #home:hover {color: #6666ff;
+            }
+            
+      #home:visited {color: darkred;
+            }
+            
+      #home:active {color: white;
+            }
+            
+      #ps4 { 
+            width: 25%;
+            height: 40px;
+            border: 2px solid #B22222;
+            padding: 10px;
+            border-radius: 5px;
+            margin: auto;
+            background-color: black;
+            color: darkgrey;
+            text-align: center;
+            box-shadow: 5px 5px 12px black;
+            }
+            
+      #ps4:hover {color: #6666ff;
+            }
+            
+      #ps4:visited {color: darkred;
+            }
+            
+      #ps4:active {color: white;
+            }
+
+      #xb1 { 
+            width: 25%;
+            height: 40px;
+            border: 2px solid #B22222;
+            padding: 10px;
+            border-radius: 5px;
+            margin: auto;
+            background-color: black;
+            color: darkgrey;
+            text-align: center;
+            box-shadow: 5px 5px 12px black;
+            }
+            
+      #xb1:hover {color: #6666ff;
+            }
+            
+      #xb1:visited {color: darkred;
+            }
+            
+      #xb1:active {color: white;
+            }
+            
+      #pc { 
+            width: 25%;
+            height: 40px;
+            border: 2px solid #B22222;
+            padding: 10px;
+            border-radius: 5px;
+            margin: auto;
+            background-color: black;
+            color: darkgrey;
+            text-align: center;
+            box-shadow: 5px 5px 12px black;
+            }
+            
+      #pc:hover {color: #6666ff;
+            }
+            
+      #pc:visited {color: darkred;
+            }
+            
+      #pc:active {color: white;
+            }
+            
+      #box2 { height: 1800px;
+            width: 506px;
+            padding: 20px;
+            float: left;
+            background-color: black;
+            color: darkgrey;
+            font-family: 'Exo 2', sans-serif;
+            text-align: center;
+            }
+            
+      #box3 { height: 1800px;
+            width: 506px;
+            padding: 20px;
+            float: left;
+            background-color: black;
+            color: darkgrey;
+            font-family: 'Exo 2', sans-serif;
+            text-align: center;
+            }
+            
+      #box4 { height: 1800px;
+            width: 506px;
+            padding: 20px;
+            float: left;
+            background-color: black;
+            color: darkgrey;
+            font-family: 'Exo 2', sans-serif;
+            text-align: center;
+            }
+
+      #boxsave { height: 50px;
+            width: 506px;
+            padding: 20px;
+            float: left;
+            background-color: black;
+            color: darkgrey;
+            font-family: 'Exo 2', sans-serif;
+            text-align: center;
+            }
+      #boxsave2 { height: 50px;
+            width: 506px;
+            padding: 20px;
+            float: left;
+            background-color: black;
+            color: darkgrey;
+            font-family: 'Exo 2', sans-serif;
+            text-align: center;
+            }
+      #boxsave3 { height: 50px;
+            width: 506px;
+            padding: 20px;
+            float: left;
+            background-color: black;
+            color: darkgrey;
+            font-family: 'Exo 2', sans-serif;
+            text-align: center;
+            }
+      #boxplug { height: 125px;
+            width: 1818px;
+            padding: 20px;
+            float: center;
+            background-color: black;
+            color: darkgrey;
+            font-family: 'Exo 2', sans-serif;
+            text-align: left;
+            }
+        
+        
+      </style>
+
+<!-- These divs navigate between the 4 pages of the app-->
+
+  <div class="box1">
+      <a id="home" href="/home">Home</a>
+      <a id="ps4" href="/ps">Playstation</a>
+      <a id="xb1" href="/xbox">Xbox</a>
+      <a id="pc" href="/pc">PC</a>
   </div>
+
+<!-- Creating the buttons for plug-in -->
+<!-- The calendar method will only work in Android/IOS -->
+
+      <div id="boxplug">
+
+            <ion-button (click)="calMethod()">Click to create Calender</ion-button>
+            <br>
+            <ion-button (click)="locationMethod()">Click to see Location</ion-button>
+            {{long}}, {{lat}}
+
+      </div>
+
+<!-- Example of the use of storage methods -->
+
+      <div id="boxsave">
+
+            <ion-title>The current Playstation console I use: {{myStatus}}</ion-title>
+
+      </div>
+
+      <div id="boxsave2">
+
+            <ion-title>The current Xbox console I use: {{myStatus2}}</ion-title>
+
+      </div>
+
+      <div id="boxsave3">
+
+            <ion-title>The current type of PC I use: {{myStatus3}}</ion-title>
+
+      </div>
+
+<!-- This is just text that pertains to the apps purpose-->
+
+  	<div id="box2"> <h1>PS4</h1>
+
+            <h2>Everything You Need To Know</h2>
+            
+            <p>For early adopters, Sony is throwing in some nice freebies, including a free month of PlayStation Plus, free month of Sony Music Unlimited, and a $10 PlayStation Store credit. </p>
+
+            <p>Unfortunately, you can't play PS3 games on the PS4. The same goes for most peripherals. Except for the PS Move, none of your PS3 peripherals (controllers, etc.) are compatible with the PS4. The same goes for older Bluetooth headsets and headphones, at least for now.<p>
+
+            <p>The PS4 can play Blu-rays and DVDs, but not CDs or MP3s (for now), and it currently won't read any files from a USB external storage device (via its two USB ports) except system software patches (you have to put the PS4 in a special "safe mode" to do system updates via a USB thumb drive). That's a serious bummer. At launch, it also cannot play 3D Blu-ray movies (nor can the Xbox One). Note that the older PS3 offers support for CDs, MP3s, 3D Blu-ray playback, and reads files from external storage devices.</p>
+
+            <p>If you've already purchased PS3 versions of select titles, you can upgrade to the PS4 version for just $10 more. This only applies to a handful of games.</p>
+
+            <p>To play multiplayer games online, you'll need a PS Plus account ($50 a year), which is a departure from the PS3's free online play model.</p>
+            
+            <br>
+
+            <p>However, unlike the Xbox 360 and Xbox One, you don't need a PS Plus account to use the entertainment apps like Netflix or Spotify.</p>
+
+            <p>The PS4 includes a 500GB hard drive, but you can replace/upgrade it yourself -- and it's pretty easy to do.</p>
+
+            <p>The PS4 has a "near-perfect" controller (according to our CNET review) that's a big upgrade over the PS3's. It has a built-in speaker and it also doubles as a motion controller (it has a light on the front like the PS Move).
+            You can charge the PS4's controllers while the console is in standby mode (unlike with the PS3).</p>
+
+            <p>Sony has launched a new PlayStation app for iOS and Android users. It allows you to use your iOS or Android device as a second screen and remote control to display and manage the action from compatible PS4 games, shop at the PlayStation Store, and view PlayStation manuals and system guides.</p>
+            
+            <p>Unlike the Xbox One, the PS4 doesn't feature any sort of TV overlay functionality -- it's called OneGuide on the Xbox One -- that allows you to switch easily from watching TV to playing games. On the Xbox One, you can also play a game and display live TV in a small panel on the side (Xbox One's "snap" feature lets you run two apps at once, with one of them in a picture-in-picture window). As an integrated home-entertainment device the Xbox One is more sophisticated out of the gate.</p>
+      
+      </div>
+
+      <div id="box3"> <h1>Xbox One</h1>
+
+            <h2>Everything You Need To Know</h2>
+            
+            <p>The Xbox 360 only had DVD support, and -- briefly, via a peripheral -- HD-DVDs. Blu-ray playback is a pleasant addition. And sorry, lovers of 3D Blu-rays, whoever you are: the Xbox One isn't compatible with you. (There is no 3D Blu-ray compatibility on PS4 at present, either.)</p>
+
+            <p>Xbox Live Gold was pretty much a requirement for any online Xbox gamer before, but that's even more the case now. Any online services require Gold, from streaming Netflix to game DVR functionality (apps and game recordings are free on the PS4, with only online gaming requiring a PlayStation Plus membership).<p>
+
+            <p>The Xbox One comes with a 500GB hard drive, and you're going to have to live with it. Right now, there's no plan to how, exactly, you'll upgrade that storage. The Xbox 360 used to have a proprietary snap-on hard drive; on the One, it lives inside the console. (PS4 owners can self-upgrade with a standard laptop hard drive.)</p>
+
+            <p>Bad news for Xbox 360 owners with huge game libraries: the Xbox One won't play your discs. And any downloaded Xbox games that exist on your Xbox Live account won't transfer over, either. It's a fresh start with the Xbox One, whether you like it or not -- but user settings and account details are retained and carried over.
+                  Disc and disc-free games alike need installation on the Xbox One, but if you go the disc route, keep in mind that you'll always need that disc inserted to start the game.</p>
+            
+            <br>
+            
+            <p>It's not even close. Not only is the One the bulkier console, but it has a very large power brick adapter attached to the power cable; the PlayStation 4 just has a regular thin plug.</p>
+
+            <p>An HDMI input allows you to run your cable box directly into the Xbox One, feeding it all your TV feeds. The Xbox One has its own searchable menu for TV listings, too, and can change the channel on your cable box, acting on its behalf. But, while you can watch your DVR, you can't use the Xbox One to access your recordings or the menus; for that, you're going to have to use your remote, as usual.</p>
+
+            <p>Using Snap, you can create a side split-screen of live TV, NFL scores, or whatever else you can think of while playing a game -- or, combine apps that involve no gaming whatsoever. Some apps don't support Snap yet, but discovering which do takes some trial and error.</p>
+
+            <p>The Xbox One encourages you to run your TV and home theater through it, meaning you'll have your Xbox One (and the Kinect) on even when watching old DVR recordings or when watching a movie. You might get pop-up Skype calls, or game notifications, right in the middle of a show. Of course, you can always disconnect it from your TV feed, too.</p>
+      
+      </div>
+	
+	<div id="box4"> <h1>PC</h1>
+
+            <h2>Everything You Need To Know</h2>
+            
+            <p>Computers allow the application of different types of software that can help businesses keep track of their files, documents, schedules and deadlines. Computers also allow businesses to organize all of their information in a very accessible manner.
+                  The ability to store large amounts of data on a computer is convenient and inexpensive, and saves space. 
+                  A computer's ability to allow a company to organize its files efficiently leads to better time management and productivity.</p>
+                  
+            <p>Computers have made staff and companies more self-sufficient by allowing them to do tasks that previously had to be outsourced. For example, a company can now use office software to create their own training material. Desktop publishing software can be used to create marketing materials. 
+                  Online tax and accounting programs allow companies to prepare their own taxes. This allows the dominant operations of a company to remain in-house and empowers the company to become more independent and less susceptible to errors committed by outside parties.</p>
+            
+            <p>Emerging technology makes new tools and services more affordable and allows companies to save on their staff payroll and office equipment. Because computers allow work to be done faster and more efficiently, it is possible for a company to hire fewer staff. 
+                  In addition, with networked and relatively inexpensive computers, companies can store data more easily, saving on the cost of outside file storage, and can avoid having to purchase as many copiers, fax machines, typewriters, and other such items that were used before computers became popular.</p>
+                  
+            <p>Correspondingly, potentially profitable businesses can be started with a smaller overhead cost. Email capabilities decrease postage costs; software applications reduce the need for large accounting departments, while videoconferencing reduces the need for travel. 
+                  All resources saved will trickle down to the consumers, who are then provided with much more affordable products and service.</p>
+            
+            <br>
+            
+            <p>Computers help speed up other business operations. The collecting of consumer feedback, ordering of raw materials, and inspection of products is made quicker through the use of computers, allowing companies to operate much faster and to produce better quality results.</p>
+            
+            <p>R&D, or research and development, costs will also decrease with the help of computers. Scientific research can now be done using the Internet and computer software applications designed to develop and produce new products and services. 
+                  For example, instead of a company having to do in-person focus groups on a potential new product or to determine their target market, the company can conduct a widespread online survey for a far lower cost. 
+                  In addition, new models of a product can be created online using virtual pictures and drawings instead of having to be hand-drawn. These interactive models created using software programs can help bring the product and its features to life for a far lower cost than creating an actual physical model of the given product.</p>
+                  
+            <p>Computers can help generate higher sales and profits for businesses via a company website. Many businesses now operate online and around the clock to allow customers from around the world to shop for their products and services.</p>
+	
+	</div>
 </ion-content>
